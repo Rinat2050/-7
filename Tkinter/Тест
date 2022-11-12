@@ -1,0 +1,31 @@
+from tkinter import *
+
+
+def clicked():      
+  lbl.configure(text="Я же просил...")
+
+
+  
+window = Tk()
+window.title('Окно')
+window.geometry('500x300')
+
+lbl = Label(window, text="Привет")
+lbl.grid(column=0, row=0)
+
+btn = Button(window, text="Не нажимать!", command=clicked)
+btn.grid(column=1, row=0)
+
+txt = Entry(window, width=10)
+txt.grid(row=1, column=0)
+
+
+# Холст
+canvas = Canvas(window, width=100, height=100, bg='white')
+canvas.grid(row=3, column=0)
+
+canvas.create_line(10, 10, 190, 50)
+
+
+
+window.mainloop()

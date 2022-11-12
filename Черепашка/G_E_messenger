@@ -1,0 +1,53 @@
+from turtle import *
+shape('turtle')  # курсор в виде черепашки
+
+'''
+right(90)            # повернуть направо
+forward(20)          # двигаться вперёд
+left(90)             # повернуть налево
+backward(20)         # идти назад
+penup()              # поднять перо
+pendown()            # опустить перо
+'''
+
+def word_E():
+  forward(20)
+  backward(20)
+  left(90)
+  forward(15)
+  right(90)
+  forward(20)
+  backward(20)
+  left(90)
+  forward(15)
+  right(90)
+  forward(20)
+  penup()
+  forward(10)
+  right(90)
+  forward(30)
+  left(90)
+  pendown()
+
+def word_g():
+  left(90)
+  forward(30)
+  right(90)
+  forward(20)
+  penup()
+  forward(10)
+  right(90)
+  forward(30)
+  left(90)
+  pendown()
+
+
+while True:
+  p = input('Введите букву (Е или Г): ')
+  if p == 'Е':
+    word_E()
+  elif p == 'Г':
+    word_g()
+  else: 
+    print('Я такое не умею печать :(')
+

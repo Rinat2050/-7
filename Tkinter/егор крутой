@@ -1,0 +1,75 @@
+from tkinter import *
+
+window = Tk()
+window.title('Окно')
+window.geometry('500x500')
+
+# Холст
+canvas = Canvas(window, width=500, height=500, bg='white')
+canvas.grid(row=3, column=0)
+
+
+# буква е
+canvas.create_line(20, 20, 40, 20)
+canvas.create_line(20, 20, 20, 60)
+canvas.create_line(20, 40, 40, 40)
+canvas.create_line(20, 60, 40, 60)
+#буква г
+canvas.create_line(60, 20, 85, 20)
+canvas.create_line(60, 20, 60, 60)
+# буква о
+canvas.create_line(105, 20, 105, 60)#1 верт
+canvas.create_line(105, 20, 130, 20)#2 гориз
+canvas.create_line(130, 20, 130, 60)#3 верт                  
+canvas.create_line(105, 60, 130, 60)#4 гориз
+# буква  р
+canvas.create_line(155, 20, 155, 60)
+canvas.create_line(155, 20, 180, 20)
+canvas.create_line(180, 20, 180, 40)
+canvas.create_line(180, 40, 155, 40)
+# буква  к
+canvas.create_line(20, 80, 20, 120)
+canvas.create_line(40, 80, 20, 100)
+canvas.create_line(40, 120, 20, 100)
+# буква  р
+canvas.create_line(60, 80, 60, 120)
+
+canvas.create_line(60, 80, 85, 80)
+canvas.create_line(85, 80, 85, 100)
+canvas.create_line(85, 100, 60, 100)
+# буква  у
+canvas.create_line(135, 80, 105, 120)
+canvas.create_line(125, 95, 110, 80)
+#буква т
+canvas.create_line(175, 80, 175, 120)
+canvas.create_line(160, 80, 190, 80)
+#буква о
+canvas.create_line(210, 80, 210, 120)
+canvas.create_line(210, 80, 240, 80)
+canvas.create_line(240, 80, 240, 120)                
+canvas.create_line(210, 120, 240, 120)
+#буква й
+canvas.create_line(260, 80, 260, 120)
+canvas.create_line(260, 120, 290, 80)
+canvas.create_line(290, 80, 290, 120)
+canvas.create_line(270, 70, 275, 80)
+canvas.create_line(280, 70, 275, 80)
+
+
+
+
+
+
+
+
+
+# canvas.create_line(20, 20, 40, 20)
+# canvas.create_rectangle(0, 0, 50, 60)
+# canvas.create_polygon(100, 10, 20, 90, 180, 90)
+# canvas.create_oval(50, 10, 150, 110, width=2)
+
+
+
+
+window.mainloop()
+

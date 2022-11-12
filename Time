@@ -1,0 +1,7 @@
+import time
+
+s = 'Привет, Нео!'
+for i in s:
+  print(i, end='')
+  time.sleep(0.2)
+

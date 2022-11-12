@@ -1,0 +1,47 @@
+from turtle import *
+shape('turtle')  # курсор в виде черепашки
+
+'''
+right(90)            # повернуть направо
+forward(20)          # двигаться вперёд
+left(90)             # повернуть налево
+
+'''
+
+b = int(input())
+forward(b)
+left(120)
+forward(b)
+left(120)
+forward(b) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

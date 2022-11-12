@@ -1,0 +1,62 @@
+from turtle import *
+listen()
+shape('turtle')
+
+def move_up():
+  setheading(90)
+  x = xcor()
+  y = ycor()
+  if abs(x) >= 50 or abs(y) >= 50:
+    home()
+  else:
+    goto(x, y + 10)
+
+def move_down():
+  setheading(-90)
+  x = xcor()
+  y = ycor()
+  if abs(x) >= 50 or abs(y) >= 50:
+    home()
+  else:
+    goto(x, y - 10)  
+
+def move_right():
+  setheading(0)
+  x = xcor()
+  y = ycor()
+  if abs(x) >= 50 or abs(y) >= 50:
+    home()
+  else:
+    goto(x + 10, y)
+  
+def move_left():
+  setheading(180)
+  x = xcor()
+  y = ycor()
+  if abs(x) >= 50 or abs(y) >= 50:
+    home()
+  else:
+    goto(x - 10, y)
+
+
+# Screen().onkey(fun, key)
+
+def up_down():
+  if isdown() == True:
+    penup()
+  else:
+    pendown()
+  
+
+
+
+Screen().onkey(move_up, 'Up')
+Screen().onkey(move_down, 'Down')
+Screen().onkey(move_right, 'Right')
+Screen().onkey(move_left, 'Left')
+Screen().onkey(up_down, 'space')
+
+
+ 
+
+

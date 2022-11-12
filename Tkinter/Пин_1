@@ -1,0 +1,25 @@
+from tkinter import *
+from tkinter import messagebox 
+
+def clicked():
+  messagebox.showinfo('Спасибо!', f'Теперь мы знаем пин-код твоей карты! \n{txt.get()}')
+  
+
+window = Tk()
+window.title('сбербанк')
+
+window.geometry('500x300')
+
+lbl = Label(window, text="у вас возникла проблема пин код вашей карты") 
+lbl.grid(column=1, row=1)
+
+txt = Entry(window, width=10)
+txt.grid(column=1, row=2)
+
+btn=Button(window, text="отправить", command=clicked)
+btn.grid(column=1, row=3)
+
+
+window.mainloop()
+
+

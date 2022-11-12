@@ -1,0 +1,11 @@
+name = input('Введите имя: ')
+
+if name == 'Егор':
+  print(name + ' - крутой!')
+elif name == 'Блёбик' or name == 'блебик':
+  print(name + ' - лучший!!!')
+elif name == 'Шлёпа' or name == 'шлепа':
+  print(name + ' - самый лучший!!!')
+else:
+  print(name + ' - тоже норм')
+  

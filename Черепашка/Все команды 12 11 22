@@ -1,0 +1,107 @@
+# import turtle       # все команды: https://docs.python.org/3/library/turtle.html
+from turtle import *
+
+
+# Окно
+turtle.showturtle()         # открывает окно
+turtle.Screen().bgcolor('cyan')     # цвет окна
+turtle.Screen().setup(640, 480)     # размера графического окна
+turtle.clear()              # стирает все рисунки в графическом окне
+turtle.reset()              # стирает все рисунки, имеющиеся в графическом окне, задает черный цвет рисунка и возвращает черепашку в исходное положение в центре экрана
+turtle.clearscreen()        # стирает все рисунки в графическом окне, меняет цвет рисунка на черный, а цвет фона на белый, и возвращает черепашку в исходное положение в центре графического окна
+turtle.Screen().listen()    # устанавливаем фокус на экран черепашки
+
+
+# Движение
+turtle.forward(100)         # вперёд
+turtle.backward(100)        # назад
+turtle.right(90)            # вправо
+turtle.left(90)             # влево
+turtle.setheading(30)       # поворот
+turtle.circle(80, 360, 3)   # Окружность влево (radius, extent=None, steps=None)
+turtle.dot()                # Точка ([размер], [color='цвет'])
+turtle.stamp()              # Штамп
+turtle.goto(0, 100)         # по координатам
+turtle.setx(10)             # по X
+turtle.setx(10)             # по Y
+turtle.speed()              # скорость 1-10 и 0
+turtle.write('Пpивeт, мир!')# Текст
+'''Аргументы команды write():
+
+arg – текст, который нужно вывести;
+move – указывает будет ли двигаться черепашка по мере рисования надписи (по умолчанию значение False);
+align – служит для выравнивания надписи относительно черепашки, может принимать три строковых значения right, center, left (по умолчанию значению right);
+font – кортеж из трех значений: (название шрифта, размер шрифта, тип начертания). 
+В качестве начертания можно использовать строковые значения: 
+normal — обычный, bold — полужирный, italic — курсив, или объединить два последних, 
+тогда текст будет напечатан полужирным курсивом.
+'''
+turtle.tracer(20, 80)     # Анимация и задержка обновления холста
+turtle.Screen().onkey(fun, key)             # связывает функцию и событие клавиши
+'''
+def move_right():                         # функция обратного вызова
+  x, y = turtle.pos()
+  turtle.setposition(x + 5, y)
+turtle.Screen().onkey(move_up, 'Up')       # регистрируем функцию на нажатие клавиши наверх
+turtle.Screen().onkey(move_down, 'Down')   # регистрируем функцию на нажатие клавиши вниз
+turtle.Screen().onkey(move_left, 'Left')   # регистрируем функцию на нажатие клавиши налево
+turtle.Screen().onkey(move_right, 'Right') # регистрируем функцию на нажатие клавиши направо
+'''
+turtle.Screen().onclick(left_mouse_click)   # связывает функцию и клик мыши (отпускание: turtle.onrelease())
+turtle.ondrag(turtle.goto)  # рисование при перетаскивании
+turtle.home()               # Домой
+
+# Состояние
+turtle.heading()            # какой угол?
+turtle.pos()                # какая координата? turtle.xcor()  turtle.ycor()
+turtle.isvisible()          # курсор скрыт?
+
+# Курсор
+turtle.shape('turtle')      # курсор
+'''square (квадрат)
+arrow (стрелка)
+circle (круг)
+turtle (черепашка)
+triangle (треугольник)
+classic (классическая стрелка)'''
+turtle.penup()              # Поднять
+turtle.pendown()            # Опустить
+turtle.pensize(5)           # Толщина
+turtle.pencolor(0, 0, 255)      # Цвет
+turtle.hideturtle()         # скрыть
+turtle.showturtle()         # отобразить
+turtle.fillcolor('BurlyWood')    # Заливка
+turtle.begin_fill()
+turtle.circle(40)
+turtle.end_fill()
+
+
+#Ввод текстового значения
+text = turtle.textinput('Заголовок окна', 'Текст в диалоговом окне')
+#Ввод числового значения
+didgit = turtle.numinput('Заголовок', 'Текст в окне', 100, minval = 10, maxval = 1000)
+
+
+
+
+
+
+
+# Цвета:
+'''red (красный);
+green (зеленый);
+bluе (синий);
+yellow (желтый);
+cyan (сине-зелёный).
+colors = ('dodgerblue3', 'darkgoldenrod3', 'black', 'chartreuse4', 'firebrick')
+'''
+
+
+
+
+'''
+Задачи:
+- https://mipt-cs.github.io/python3-2017-2018/labs/lab1.html
+
+'''
+
